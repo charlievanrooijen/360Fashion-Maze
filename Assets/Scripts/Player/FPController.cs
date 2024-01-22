@@ -74,10 +74,22 @@ public class FPController : MonoBehaviour
 
         if(canMove)
         {
-            rotationX += -Input.GetAxis("Mouse Y") * lookSpeed;
+            // Get Mouse Input
+            float mouseX = Input.GetAxis("Mouse X") * lookSpeed;
+            float mouseY = -Input.GetAxis("Mouse Y") * lookSpeed;
+
+            // Get Joystick Input
+            float joystickX = Input.GetAxis("RightStickHorizontal") * (lookSpeed / 50);
+            float joystickY = -Input.GetAxis("RightStickVertical") * (lookSpeed / 50);
+
+            // Combine Mouse and Joystick Input
+            float finalX = mouseX + joystickX;
+            float finalY = mouseY + joystickY;
+
+            rotationX += finalY;
             rotationX = Mathf.Clamp(rotationX, -lookXLimit, lookXLimit);
             playerCamera.transform.localRotation = Quaternion.Euler(rotationX, 0, 0);
-            transform.rotation *= Quaternion.Euler(0, Input.GetAxis("Mouse X") * lookSpeed, 0); 
+            transform.rotation *= Quaternion.Euler(0, finalX, 0);
         }
 
 

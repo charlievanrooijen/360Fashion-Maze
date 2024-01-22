@@ -1,0 +1,54 @@
+{
+    "name": "Phone View",
+    "maps": [
+        {
+            "name": "TogglePhoneView",
+            "id": "4214b7aa-873c-4dff-8d11-f2fc61aa2904",
+            "actions": [
+                {
+                    "name": "R3 PS",
+                    "type": "Button",
+                    "id": "f0df5da0-61d6-4d85-9b22-917c1723ef9a",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "R3 XBOX",
+                    "type": "Button",
+                    "id": "af46371f-3b96-4d22-9f77-dba474d64bea",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "f58bb445-1780-4164-8b17-d1c6ca8165c8",
+                    "path": "<DualShockGamepad>/rightStickPress",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "R3 PS",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "e44a4af7-1515-41a2-bfa5-ab34e52af54d",
+                    "path": "<DualShock4GamepadAndroid>/rightStickPress",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "R3 XBOX",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        }
+    ],
+    "controlSchemes": []
+}
